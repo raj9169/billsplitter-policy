@@ -71,6 +71,24 @@
             margin-top: 20px;
             font-weight: bold;
         }
+
+        /* Analytics Section Styling */
+        .analytics-note {
+            background: #fff3cd; /* Light yellow for important notes */
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ffeaa7;
+            margin: 15px 0;
+        }
+
+        /* Compliance Section */
+        .compliance-note {
+            background: #e8f5e8; /* Light green for compliance info */
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #c8e6c9;
+            margin: 15px 0;
+        }
     </style>
 </head>
 <body>
@@ -80,10 +98,14 @@
     <h2>Introduction</h2>
     <p>Bill Splitter Pro ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.</p>
 
+    <div class="compliance-note">
+        <p><strong>Compliance Note:</strong> This privacy policy complies with Google Play's Data Safety requirements and current Firebase Analytics policies.</p>
+    </div>
+
     <h2>Information We Collect</h2>
     
     <h3>Personal Information</h3>
-    <p>We do not collect any personal information that can identify you personally, such as phone number, or payment information.</p>
+    <p>We do not collect any personal information that can identify you personally, such as name, email address, phone number, or payment information.</p>
 
     <h3>Local Data Storage</h3>
     <p>The app stores the following information locally on your device:</p>
@@ -92,67 +114,150 @@
         <li>Participant names (as entered by you)</li>
         <li>Expense details (amounts, descriptions, dates)</li>
         <li>Balance calculations</li>
+        <li>App preferences and settings</li>
     </ul>
-    <p>This data is stored only on your device using Flutter SharedPreferences and is not transmitted to our servers or third parties.</p>
+    <p>This data is stored only on your device using local storage and is not transmitted to our servers or third parties.</p>
+
+    <h3>Analytics and Crash Reporting</h3>
+    <div class="analytics-note">
+        <p><strong>Google Analytics for Firebase:</strong> We use Google Analytics for Firebase to collect anonymous usage data to improve our app experience. This includes:</p>
+        <ul>
+            <li>App engagement metrics (session duration, feature usage)</li>
+            <li>Performance data and crash reports</li>
+            <li>Device information (type, model, OS version) for compatibility</li>
+            <li>Approximate location (country-level) based on IP address</li>
+            <li>Installation source and first open data</li>
+        </ul>
+        
+        <p><strong>Data Anonymization:</strong> All analytics data is collected in anonymized form. We <strong>do not</strong> collect:</p>
+        <ul>
+            <li>Personal identification information (name, email, etc.)</li>
+            <li>Specific bill amounts or financial transaction details</li>
+            <li>Exact GPS location or precise location data</li>
+            <li>Contact information from your device</li>
+            <li>Names of participants or groups you create in the app</li>
+        </ul>
+
+        <p><strong>Firebase Crashlytics:</strong> We use Firebase Crashlytics to monitor app stability and fix crashes. Crash reports may include:</p>
+        <ul>
+            <li>Device state information at time of crash</li>
+            <li>Stack traces and error logs</li>
+            <li>App version and installation ID</li>
+        </ul>
+    </div>
 
     <h3>Automatically Collected Information</h3>
-    <p>We do not automatically collect information such as Name and Email.</p>
-    <p><strong>We do not collect:</strong></p>
+    <p>Through our analytics services, we automatically collect anonymous information such as:</p>
     <ul>
-        <li>Device information</li>
-        <li>Location data</li>
-        <li>Usage statistics</li>
-        <li>Crash reports</li>
-        <li>Advertising identifiers</li>
+        <li>Device type, model, and manufacturer</li>
+        <li>Operating system version and language settings</li>
+        <li>App version number and installation source</li>
+        <li>Crash reports and performance metrics</li>
+        <li>Interaction events with app features</li>
     </ul>
 
     <h2>How We Use Your Information</h2>
     <p>The information you enter in the app is used solely for:</p>
     <ul>
         <li>Calculating expense splits and balances</li>
-        <li>Displaying your groups and expenses</li>
-        <li>Providing the core functionality of bill splitting</li>
+        <li>Displaying your groups and expense history</li>
+        <li>Providing the core bill splitting functionality</li>
         <li>Maintaining your data locally on your device</li>
+        <li>Remembering your app preferences and settings</li>
+    </ul>
+
+    <p><strong>Analytics and crash data</strong> is used to:</p>
+    <ul>
+        <li>Improve app performance and stability</li>
+        <li>Identify and fix technical issues and crashes</li>
+        <li>Understand user behavior and feature usage patterns</li>
+        <li>Make data-driven decisions for future updates</li>
+        <li>Ensure compatibility across different devices</li>
     </ul>
 
     <h2>Data Sharing and Disclosure</h2>
     
-    <h3>No Data Sharing</h3>
+    <h3>Third-Party Services</h3>
+    <p>We use the following Google services:</p>
+    <ul>
+        <li><strong>Google Analytics for Firebase:</strong> For app analytics and usage statistics</li>
+        <li><strong>Firebase Crashlytics:</strong> For crash reporting and stability monitoring</li>
+    </ul>
+    
+    <p>These services process anonymous data as described in their respective privacy policies. Data shared with these services is limited to anonymous usage statistics and does not include your personal bill data.</p>
+
+    <h3>Data Sharing Limitations</h3>
     <p>We do not:</p>
     <ul>
-        <li>Share your data with third parties</li>
-        <li>Sell your data to advertisers</li>
-        <li>Use your data for marketing purposes</li>
-        <li>Transfer your data to our servers</li>
+        <li>Sell, rent, or trade your data to advertisers or third parties</li>
+        <li>Use your data for targeted advertising or marketing campaigns</li>
+        <li>Share your personal bill data, group information, or expense details with anyone</li>
+        <li>Combine analytics data with personally identifiable information</li>
     </ul>
 
     <h2>Data Security</h2>
-    <p>We implement appropriate technical measures to ensure the security of your data stored locally on your device. However, please note that no method of electronic storage is 100% secure.</p>
+    <p>We implement appropriate security measures to protect your data:</p>
+    <ul>
+        <li>Your bill data is stored locally on your device and never transmitted to our servers</li>
+        <li>Analytics data is anonymized before processing</li>
+        <li>We use secure connections for any data transmission</li>
+        <li>Regular security reviews of our data practices</li>
+    </ul>
 
     <h2>Data Retention</h2>
-    <p>Your data remains on your device until:</p>
+    <p><strong>Your Local Bill Data:</strong> Remains on your device until:</p>
     <ul>
         <li>You manually delete it through the app</li>
         <li>You uninstall the application</li>
         <li>You clear the app's data from your device settings</li>
+        <li>You perform a factory reset on your device</li>
     </ul>
-    <p>We do not maintain any copies of your data on our servers.</p>
+    
+    <p><strong>Analytics Data:</strong> Retained according to Google's data retention policies:</p>
+    <ul>
+        <li>Standard analytics data: Up to 14 months</li>
+        <li>Crash reports: Until the issue is resolved and verified</li>
+        <li>You can request data deletion by contacting us</li>
+    </ul>
 
-    <h2>Your Rights</h2>
-    <p>Since we don't collect personal data, you have full control over what information you enter in the app and when to delete it.</p>
+    <h2>Your Rights and Choices</h2>
+    <p>You have full control over your data:</p>
+    <ul>
+        <li><strong>Local Data:</strong> Complete control to add, modify, or delete your bill data within the app</li>
+        <li><strong>App Usage:</strong> You can stop using the app at any time</li>
+        <li><strong>Data Export:</strong> You can export your data from within the app</li>
+    </ul>
+    
+    <p><strong>For Analytics Data:</strong></p>
+    <ul>
+        <li>Reset your advertising identifier through your device settings</li>
+        <li>Opt-out of personalized ads through your device settings</li>
+        <li>Contact us to request deletion of analytics data associated with your device</li>
+    </ul>
+
+    <h2>International Data Transfers</h2>
+    <p>Analytics data may be processed on servers located outside your country of residence. Google maintains servers globally and implements appropriate safeguards for international data transfers.</p>
 
     <h2>Children's Privacy</h2>
-    <p>Our app does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
+    <p>Our app does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal data, please contact us.</p>
 
     <h2>Changes to This Privacy Policy</h2>
-    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by:</p>
+    <ul>
+        <li>Posting the new Privacy Policy on this page</li>
+        <li>Updating the "Last Updated" date at the top of this policy</li>
+        <li>Providing in-app notification for significant changes</li>
+    </ul>
+    <p>You are advised to review this Privacy Policy periodically for any changes.</p>
 
     <div class="contact">
         <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <p>If you have any questions about this Privacy Policy, our data practices, or would like to exercise your data rights, please contact us at:</p>
         <p>Email: billsplitter256@gmail.com</p>
+        <p>We typically respond to privacy-related inquiries within 7 business days.</p>
     </div>
 
-    <p class="acknowledgement">By using our application, you hereby consent to our Privacy Policy and agree to its terms.</p>
+    <p class="acknowledgement">By using our application, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.</p>
 </body>
+</html>
 </html>
